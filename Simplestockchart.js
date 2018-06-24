@@ -291,6 +291,7 @@ SimpleStockChart.prototype.init = function (x_i, x_ii) {
             });
             var pathData = "M" + parseInt(x[0]) + " " + parseInt(y[0]);
             for (var i = 1, iL = y.length; i < iL; i++) pathData += (" L " + parseInt(x[i]) + " " + parseInt(y[i]));
+            pathData += " L " + parseInt(width) + " " + parseInt(y[y.length - 1]);
             defaultPath = pointer.svg("path");
             pointer.attr(defaultPath, {
                 "fill": pointer.chart.fill,
